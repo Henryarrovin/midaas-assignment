@@ -1,0 +1,997 @@
+{
+  "info": {
+    "_postman_id": "30d24841-e487-43fb-889a-f7796bd205f9",
+    "name": "Midaas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30121938"
+  },
+  "item": [
+    {
+      "name": "restaurant",
+      "item": [
+        {
+          "name": "CreateRestaurant",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"MoonWalk\",\r\n    \"phone_number\": \"0123456789\",\r\n    \"website_info\": \"MoonWalk\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/restaurant",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "restaurant"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "CreateRestaurant",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"MoonWalk\",\r\n    \"phone_number\": \"0123456789\",\r\n    \"website_info\": \"MoonWalk\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/restaurant",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "restaurant"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 25 Aug 2026 14:01:56 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "185"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2092251129973837824,\n    \"name\": \"MoonWalk\",\n    \"phone_number\": \"0123456789\",\n    \"website_info\": \"MoonWalk\",\n    \"created_at\": \"2026-08-25T19:31:56.192977Z\",\n    \"updated_at\": \"2026-08-25T19:31:56.192977Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "GetAllRestaurants",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/restaurant",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "restaurant"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetAllRestaurants",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/restaurant",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "restaurant"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 25 Aug 2026 14:02:22 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "187"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 2092251129973837824,\n        \"name\": \"MoonWalk\",\n        \"phone_number\": \"0123456789\",\n        \"website_info\": \"MoonWalk\",\n        \"created_at\": \"2026-08-25T19:31:56.192977Z\",\n        \"updated_at\": \"2026-08-25T19:31:56.192977Z\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "GetRestaurantsByID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/restaurant/2092251129973837824",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "restaurant",
+                "2092251129973837824"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetRestaurantsByID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/restaurant/2092251129973837824",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "restaurant",
+                    "2092251129973837824"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 25 Aug 2026 14:02:38 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "185"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2092251129973837824,\n    \"name\": \"MoonWalk\",\n    \"phone_number\": \"0123456789\",\n    \"website_info\": \"MoonWalk\",\n    \"created_at\": \"2026-08-25T19:31:56.192977Z\",\n    \"updated_at\": \"2026-08-25T19:31:56.192977Z\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dishes",
+      "item": [
+        {
+          "name": "CreateDish",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"restaurant_id\": 2092251129973837824,\r\n    \"name\": \"Noodles\",\r\n    \"cuisine_type\": \"Indian\",\r\n    \"currency_code\": \"INR\",\r\n    \"price\": 400,\r\n    \"prep_time\": \"50s\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/dish",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "dish"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "CreateDish",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"restaurant_id\": 2092251129973837824,\r\n    \"name\": \"Rice\",\r\n    \"cuisine_type\": \"Indian\",\r\n    \"currency_code\": \"INR\",\r\n    \"price\": 300,\r\n    \"prep_time\": \"1m\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dish",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dish"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 12:39:56 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "244"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2092592882111221760,\n    \"restaurant_id\": 2092251129973837824,\n    \"name\": \"Rice\",\n    \"cuisine_type\": \"Indian\",\n    \"currency_code\": \"INR\",\n    \"price\": 300,\n    \"prep_time\": \"00:01:00\",\n    \"created_at\": \"2026-08-26T18:09:56.249797Z\",\n    \"updated_at\": \"2026-08-26T18:09:56.249797Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "GetAllDish",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/dish",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "dish"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetAllDish",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/api/dish",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dish"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 12:42:34 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "493"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 2092592882111221760,\n        \"restaurant_id\": 2092251129973837824,\n        \"name\": \"Rice\",\n        \"cuisine_type\": \"Indian\",\n        \"currency_code\": \"INR\",\n        \"price\": 300,\n        \"prep_time\": \"00:01:00\",\n        \"created_at\": \"2026-08-26T18:09:56.249797Z\",\n        \"updated_at\": \"2026-08-26T18:09:56.249797Z\"\n    },\n    {\n        \"id\": 2092593506139770880,\n        \"restaurant_id\": 2092251129973837824,\n        \"name\": \"Noodles\",\n        \"cuisine_type\": \"Indian\",\n        \"currency_code\": \"INR\",\n        \"price\": 400,\n        \"prep_time\": \"00:00:50\",\n        \"created_at\": \"2026-08-26T18:12:25.028855Z\",\n        \"updated_at\": \"2026-08-26T18:12:25.028855Z\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "GetDishById",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/dish/2092592882111221760",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "dish",
+                "2092592882111221760"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetDishById",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/api/dish/2092592882111221760",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dish",
+                    "2092592882111221760"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 12:41:07 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "244"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2092592882111221760,\n    \"restaurant_id\": 2092251129973837824,\n    \"name\": \"Rice\",\n    \"cuisine_type\": \"Indian\",\n    \"currency_code\": \"INR\",\n    \"price\": 300,\n    \"prep_time\": \"00:01:00\",\n    \"created_at\": \"2026-08-26T18:09:56.249797Z\",\n    \"updated_at\": \"2026-08-26T18:09:56.249797Z\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "employee",
+      "item": [
+        {
+          "name": "GetEmployee",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"restaurant_id\": 2092251129973837824,\r\n    \"name\": \"employee3\",\r\n    \"emp_type\": \"MANAGER\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/employee",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "employee"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetEmployee",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"restaurant_id\": 2092251129973837824,\r\n    \"name\": \"employee1\",\r\n    \"emp_type\": \"COOK\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/employee",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "employee"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 12:55:18 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "198"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2092596752099053568,\n    \"restaurant_id\": 2092251129973837824,\n    \"name\": \"employee1\",\n    \"emp_type\": \"COOK\",\n    \"free\": true,\n    \"created_at\": \"2026-08-26T18:25:18.927048Z\",\n    \"updated_at\": \"2026-08-26T18:25:18.927048Z\"\n}"
+            },
+            {
+              "name": "GetEmployee",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"restaurant_id\": 2092251129973837824,\r\n    \"name\": \"employee2\",\r\n    \"emp_type\": \"COOK\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/employee",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "employee"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 15:57:40 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "198"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2092642645712048128,\n    \"restaurant_id\": 2092251129973837824,\n    \"name\": \"employee2\",\n    \"emp_type\": \"COOK\",\n    \"free\": true,\n    \"created_at\": \"2026-08-26T21:27:40.819553Z\",\n    \"updated_at\": \"2026-08-26T21:27:40.819553Z\"\n}"
+            },
+            {
+              "name": "GetEmployee",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"restaurant_id\": 2092251129973837824,\r\n    \"name\": \"employee3\",\r\n    \"emp_type\": \"MANAGER\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/employee",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "employee"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 15:58:11 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "201"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2092642774774976512,\n    \"restaurant_id\": 2092251129973837824,\n    \"name\": \"employee3\",\n    \"emp_type\": \"MANAGER\",\n    \"free\": true,\n    \"created_at\": \"2026-08-26T21:28:11.587332Z\",\n    \"updated_at\": \"2026-08-26T21:28:11.587332Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "GetAllEmployee",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/employee",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "employee"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetAllEmployee",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/employee",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "employee"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 15:59:01 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "797"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 2092596401241329664,\n        \"restaurant_id\": 2092251129973837824,\n        \"name\": \"employee1\",\n        \"emp_type\": \"COOK\",\n        \"free\": true,\n        \"created_at\": \"2026-08-26T18:23:55.274792Z\",\n        \"updated_at\": \"2026-08-26T18:23:55.274792Z\"\n    },\n    {\n        \"id\": 2092596752099053568,\n        \"restaurant_id\": 2092251129973837824,\n        \"name\": \"employee1\",\n        \"emp_type\": \"COOK\",\n        \"free\": true,\n        \"created_at\": \"2026-08-26T18:25:18.927048Z\",\n        \"updated_at\": \"2026-08-26T18:25:18.927048Z\"\n    },\n    {\n        \"id\": 2092642645712048128,\n        \"restaurant_id\": 2092251129973837824,\n        \"name\": \"employee2\",\n        \"emp_type\": \"COOK\",\n        \"free\": true,\n        \"created_at\": \"2026-08-26T21:27:40.819553Z\",\n        \"updated_at\": \"2026-08-26T21:27:40.819553Z\"\n    },\n    {\n        \"id\": 2092642774774976512,\n        \"restaurant_id\": 2092251129973837824,\n        \"name\": \"employee3\",\n        \"emp_type\": \"MANAGER\",\n        \"free\": true,\n        \"created_at\": \"2026-08-26T21:28:11.587332Z\",\n        \"updated_at\": \"2026-08-26T21:28:11.587332Z\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "GetEmployeeByID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/employee/2092596401241329664",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "employee",
+                "2092596401241329664"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetEmployeeByID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/employee/2092596401241329664",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "employee",
+                    "2092596401241329664"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 15:59:53 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "198"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2092596401241329664,\n    \"restaurant_id\": 2092251129973837824,\n    \"name\": \"employee1\",\n    \"emp_type\": \"COOK\",\n    \"free\": true,\n    \"created_at\": \"2026-08-26T18:23:55.274792Z\",\n    \"updated_at\": \"2026-08-26T18:23:55.274792Z\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "CreateOrder",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"order\": {\r\n        \"restaurant_id\": 2092251129973837824,\r\n        \"food_id\": [\r\n            2092592882111221760,\r\n            2092593506139770880,\r\n            2092592882111221760,\r\n            2092592882111221760,\r\n            2092593506139770880,\r\n            2092593506139770880\r\n        ]\r\n    },\r\n    \"customer\": {\r\n        \"name\": \"Henry\"\r\n    }\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/order",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "order"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "CreateOrder",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"order\": {\r\n        \"restaurant_id\": 2092251129973837824,\r\n        \"food_id\": [\r\n            2092592882111221760,\r\n            2092593506139770880\r\n        ]\r\n    },\r\n    \"customer\": {\r\n        \"name\": \"Henry\"\r\n    }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/order",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "order"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 26 Aug 2026 19:26:26 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "554"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"order\": {\n        \"id\": 2092695182762840064,\n        \"restaurant_id\": 2092251129973837824,\n        \"food_id\": [\n            2092592882111221760,\n            2092593506139770880\n        ],\n        \"paid\": true,\n        \"status\": \"PENDING\",\n        \"created_at\": \"2026-08-27T00:56:26.623824Z\",\n        \"updated_at\": \"2026-08-27T00:56:26.623824Z\"\n    },\n    \"customer\": {\n        \"id\": 2092695182779617280,\n        \"name\": \"Henry\",\n        \"created_at\": \"2026-08-27T00:56:26.623824Z\",\n        \"updated_at\": \"2026-08-27T00:56:26.623824Z\"\n    },\n    \"countdown\": {\n        \"id\": 2092695182796394496,\n        \"order_id\": 2092695182762840064,\n        \"customer_id\": 2092695182779617280,\n        \"created_at\": \"2026-08-27T00:56:26.623824Z\",\n        \"prepare_time\": \"00:00:01\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "GetOrderStatus",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/order/2094306547042619392",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "order",
+                "2094306547042619392"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetOrderStatus",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/api/order/2094306547042619392",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "order",
+                    "2094306547042619392"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 31 Aug 2026 06:09:41 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "113"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"order_id\": 2094306547042619392,\n        \"customer_id\": 2094306547051008000,\n        \"remaining_time\": \"01:34\",\n        \"status\": \"PENDING\"\n    }\n]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
